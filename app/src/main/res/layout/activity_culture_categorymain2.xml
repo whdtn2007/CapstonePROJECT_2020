@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_culture_categorymain2">
+
+    <ImageView
+        android:id="@+id/img_culture_categorymain2"
+        android:layout_width="252dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_culture_categorymain2_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listview_categorymain_2_genre"
+        app:srcCompat="@drawable/logo2" />
+
+    <EditText
+        android:id="@+id/txt_culture_categorymain2_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="23dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="입 력"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/txt_culture_categorymain_1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_culture_categorymain1_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
+
+    <Button
+        android:id="@+id/btn_culture_categorymain2_search"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/rectanglebutton"
+        android:text="검 색"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_culture_categorymain_search"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_culture_categorymain2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="241dp"
+        android:layout_marginBottom="548dp"
+        android:text="장르별추천 top 5"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_culture_categorymain_search" />
+
+    <Button
+        android:id="@+id/btn_culture_categorymain2_plus"
+        android:layout_width="74dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="328dp"
+        android:background="@drawable/round_button"
+        android:text="+"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txt_culture_categorymain2_2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_culture_categorymain_1" />
+
+    <TextView
+        android:id="@+id/txt_culture_categorymain2_2"
+        android:layout_width="141dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="4dp"
+        android:text="기록 추가"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/listview_categorymain2_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_culture_categorymain2_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="16dp"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ListView
+        android:id="@+id/listview_categorymain_2_genre"
+        android:layout_width="359dp"
+        android:layout_height="146dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328" />
+
+    <ListView
+        android:id="@+id/listview_categorymain2_1"
+        android:layout_width="372dp"
+        android:layout_height="254dp"
+        android:layout_marginBottom="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

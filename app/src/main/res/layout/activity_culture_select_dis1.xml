@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_culture_selectDis1">
+
+    <TextView
+        android:id="@+id/txt_culture_select_1"
+        android:layout_width="129dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="@font/fontstylekor"
+        android:text="장르선택"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
+        app:layout_constraintEnd_toStartOf="@+id/btn_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg_select_genre"
+        android:layout_width="304dp"
+        android:layout_height="342dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginBottom="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_culture_select_genre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="313dp"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rb_select_genre_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="로맨스"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/rb_select_genre_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26dp"
+                android:text="공상과학"
+                app:layout_constraintBottom_toTopOf="@+id/rb_select_genre_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioButton
+                android:id="@+id/rb_select_genre_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:text="스릴러"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rb_select_genre_2" />
+
+            <RadioButton
+                android:id="@+id/rb_select_genre_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="44dp"
+                android:text="코미디"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioButton
+                android:id="@+id/rb_select_genre_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="74dp"
+                android:text="액션"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_culture_select_genre"
+        android:layout_width="169dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="160dp"
+        android:text="장르선택"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_select_genre" />
+
+    <ImageView
+        android:id="@+id/img_culture_select_dis1"
+        android:layout_width="172dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="236dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_select_genre"
+        app:srcCompat="@drawable/logo3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

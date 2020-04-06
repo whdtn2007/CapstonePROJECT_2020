@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_cal_main">
+
+    <Button
+        android:id="@+id/btn_calmain_menu"
+        android:layout_width="118dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/fontstylekor"
+        android:text="Home"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/calendarView"
+        app:layout_constraintStart_toEndOf="@+id/txt_calmain_name2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596" />
+
+    <TextView
+        android:id="@+id/txt_calmain_name2"
+        android:layout_width="40dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="@font/fontstylekor"
+        android:text="님"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
+        app:layout_constraintEnd_toStartOf="@+id/btn_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_calmain_name"
+        android:layout_width="91dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="@font/fontstylekor"
+        android:text="홍길동"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="352dp"
+        android:layout_height="332dp"
+        android:layout_marginEnd="28dp"
+        android:maxDate="12/31/2020"
+        android:minDate="01/01/2020"
+        app:layout_constraintBottom_toTopOf="@+id/img_calmain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.679"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_calmain_name"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <ImageView
+        android:id="@+id/img_calmain"
+        android:layout_width="248dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="464dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_calmain_name"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/logo2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

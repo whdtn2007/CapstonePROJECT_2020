@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_cal_day_lunch">
+
+    <TextView
+        android:id="@+id/txt_caldayl_name"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="@font/fontstylekor"
+        android:text="홍길동"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_caldayl_meal"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="@font/fontstylekor"
+        android:text="점심식사"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_caldayl_name2"
+        android:layout_width="46dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="@font/fontstylekor"
+        android:text="님"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
+        app:layout_constraintEnd_toStartOf="@+id/btn_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_caldayl_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOME"
+        app:layout_constraintBottom_toTopOf="@+id/txt_caldayl_meal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toEndOf="@+id/txt_caldayl_name2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.601" />
+
+    <Button
+        android:id="@+id/btn_caldayl_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="음식검색"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calday_listView_lunch" />
+
+    <ListView
+        android:id="@+id/calday_listView_lunch"
+        android:layout_width="358dp"
+        android:layout_height="280dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.618" />
+
+    <ImageView
+        android:id="@+id/img_calday_lunch"
+        android:layout_width="241dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="472dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_caldayl_search"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_caldayl_name"
+        app:srcCompat="@drawable/logo2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

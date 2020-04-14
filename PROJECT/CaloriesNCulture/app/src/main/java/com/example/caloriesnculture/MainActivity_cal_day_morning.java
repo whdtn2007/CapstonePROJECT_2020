@@ -13,10 +13,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity_cal_day_morning extends AppCompatActivity {
+    String date;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cal_day_morning);
+        //오늘의 날짜
+        Intent intent_calday_morning=getIntent();
+        date=intent_calday_morning.getStringExtra("today");
 
 
         Button btn_caldaym_search=findViewById(R.id.btn_caldaym_search);

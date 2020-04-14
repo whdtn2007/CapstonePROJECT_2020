@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="height">
+
         <item>140</item>
         <item>141</item>
         <item>142</item>

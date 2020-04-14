@@ -4,11 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity_main extends Activity{
+    TextView nickname;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        nickname=(TextView)findViewById(R.id.txt_main_name);
+        Intent login_intent=getIntent();
+        final String nickdata=login_intent.getStringExtra("nickname");
+
+        nickname.setText(nickdata);
 
         Button btn_logout=findViewById(R.id.btn_logout);
         btn_logout.setOnClickListener(new View.OnClickListener(){
@@ -22,6 +29,7 @@ public class MainActivity_main extends Activity{
         btn_main_calorie.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent_btn_main_calorie=new Intent(MainActivity_main.this, MainActivity_cal_main.class);
+                intent_btn_main_calorie.putExtra("nickname2",nickdata);
                 startActivity(intent_btn_main_calorie);
             }
         });
@@ -38,6 +46,7 @@ public class MainActivity_main extends Activity{
         btn_main_culture.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent_btn_main_culture=new Intent(MainActivity_main.this, MainActivity_culture_main.class);
+                intent_btn_main_culture.putExtra("nickname3",nickdata);
                 startActivity(intent_btn_main_culture);
             }
         });

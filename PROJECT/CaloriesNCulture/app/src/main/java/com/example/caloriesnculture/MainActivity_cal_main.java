@@ -1,6 +1,7 @@
 package com.example.caloriesnculture;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,14 +14,20 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity_cal_main extends AppCompatActivity {
 
     TextView nickname;
+    String nickdata="";
+    SharedPreferences pref;
+    SharedPreferences.Editor editor;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cal_main);
 
         nickname=(TextView)findViewById(R.id.txt_calmain_name);
-        Intent cal_main_intent=getIntent();
-        String nickdata=cal_main_intent.getStringExtra("nickname2");
+
+        //Intent cal_main_intent=getIntent();
+        //nickdata=cal_main_intent.getStringExtra("nickname2");
+        pref=getSharedPreferences("staticFILE",MODE_PRIVATE);
+        nickdata=pref.getString("nickname","error");
         nickname.setText(nickdata);
 
         Button btn_calmain_menu=findViewById(R.id.btn_calmain_menu);
@@ -37,8 +44,13 @@ public class MainActivity_cal_main extends AppCompatActivity {
                                             int month, int dayOfMonth) {
                 String date="" + year + "/" + (month + 1) + "/" + dayOfMonth;
                 Toast.makeText(MainActivity_cal_main.this, date,Toast.LENGTH_LONG ).show();
+                pref=getSharedPreferences("staticFILE",MODE_PRIVATE);
+                editor=pref.edit();
+                editor.putString("inputdate_cal",date);
+                editor.commit();
                 Intent intent= new Intent(MainActivity_cal_main.this, MainActivity_cal_day.class);
-                intent.putExtra("today",date);
+                //intent.putExtra("today",date);
+                //intent.putExtra("nick",nickdata);
                 startActivity(intent);
             }
         });

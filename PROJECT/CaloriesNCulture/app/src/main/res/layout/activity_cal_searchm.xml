@@ -78,11 +78,12 @@
         android:layout_marginStart="26dp"
         android:layout_marginBottom="2dp"
         android:ems="10"
+        android:hint="음식 검색"
         android:inputType="textPersonName"
-        android:text="음식검색"
         app:layout_constraintBottom_toTopOf="@+id/calsearch_listView_food1"
         app:layout_constraintEnd_toStartOf="@+id/btn_calsearch_search"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_calsearch_search" />
+        app:layout_constraintTop_toTopOf="@+id/btn_calsearch_search"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

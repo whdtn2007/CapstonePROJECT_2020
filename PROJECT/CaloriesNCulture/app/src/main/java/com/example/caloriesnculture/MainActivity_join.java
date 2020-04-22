@@ -132,6 +132,7 @@ public class MainActivity_join extends AppCompatActivity {
                 String str;
                 URL url = new URL("http://106.241.33.158:1080/join.jsp");//바꿔주세요//http://192.168.56.1:8080/Cap_Connection_2/join_pra.jsp"
                 // 192.168.56.1
+                //"http://106.241.33.158:1080/join.jsp"
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
                 conn.setRequestMethod("POST");
@@ -167,12 +168,12 @@ public class MainActivity_join extends AppCompatActivity {
         @Override
         public void onClick(View view1) {
 
-            int id = rg.getCheckedRadioButtonId();
-
 
 
             switch (view1.getId()) {
                 case R.id.btn_join : // 회원가입
+
+                    int id = rg.getCheckedRadioButtonId();
                     RadioButton rb = (RadioButton) findViewById(id);
                     rbtext=rb.getText().toString();
                     String joinid = join_id.getText().toString();

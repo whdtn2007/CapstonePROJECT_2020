@@ -1,6 +1,7 @@
 package com.example.caloriesnculture;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,8 @@ import java.net.URL;
 public class MainActivity_login extends AppCompatActivity {
     EditText userId, userPwd;
     Button loginBtn, joinBtn;
+    SharedPreferences pref;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +43,9 @@ public class MainActivity_login extends AppCompatActivity {
         protected String doInBackground(String... strings) {
             try {
                 String str;
-                URL url = new URL("http://106.241.33.158:1080/login.jsp");//바꿔주세요//http://192.168.56.1:8080/Cap_Connection_2/login_pra.jsp
+                URL url = new URL("http://106.241.33.158:1080/login.jsp");//바꿔주세요
+                // http://192.168.56.1:8080/Cap_Connection_2/login_pra.jsp
+                //http://106.241.33.158:1080/login.jsp
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
                 conn.setRequestMethod("POST");
@@ -83,7 +88,11 @@ public class MainActivity_login extends AppCompatActivity {
                         if(result.equals("true")) {
                             Toast.makeText(MainActivity_login.this,"로그인",Toast.LENGTH_SHORT).show();
                             Intent intent_loginBtn= new Intent(MainActivity_login.this, MainActivity_main.class);
-                            intent_loginBtn.putExtra("nickname",loginid);
+                            pref=getSharedPreferences("staticFILE",MODE_PRIVATE);
+                            editor=pref.edit();
+                            editor.putString("nickname",loginid);
+                            editor.commit();
+                            //intent_loginBtn.putExtra("nickname",loginid);
                             startActivity(intent_loginBtn);
                             finish();
                         } else if(result.equals("false")) {

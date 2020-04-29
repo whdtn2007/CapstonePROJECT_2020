@@ -169,24 +169,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_calday_result_kcal_5"
-        android:layout_width="53dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="232dp"
-        android:layout_marginTop="344dp"
-        android:layout_marginEnd="116dp"
-        android:layout_marginBottom="101dp"
-        android:fontFamily="@font/fontstylekor"
-        android:text="Kcal"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
-        app:layout_constraintEnd_toStartOf="@+id/btn_edit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/txt_calday_result_kcal_4"
         android:layout_width="53dp"
         android:layout_height="29dp"
@@ -234,24 +216,6 @@
         android:text="Kcal"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
-        app:layout_constraintEnd_toStartOf="@+id/btn_edit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txt_calday_result_totkcal_1"
-        android:layout_width="32dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="344dp"
-        android:layout_marginEnd="116dp"
-        android:layout_marginBottom="101dp"
-        android:fontFamily="@font/fontstylekor"
-        android:text="+"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
         app:layout_constraintEnd_toStartOf="@+id/btn_edit"
@@ -388,8 +352,8 @@
         android:id="@+id/txt_calday_result_totkcal"
         android:layout_width="91dp"
         android:layout_height="45dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="392dp"
         android:layout_marginEnd="116dp"
         android:layout_marginBottom="101dp"
         android:fontFamily="@font/fontstylekor"
@@ -402,10 +366,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/txt_calday_result_totkcal_1"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="392dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="@font/fontstylekor"
+        android:text="+"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
+        app:layout_constraintEnd_toStartOf="@+id/btn_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_calday_result_kcal_5"
+        android:layout_width="53dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="392dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="@font/fontstylekor"
+        android:text="Kcal"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
+        app:layout_constraintEnd_toStartOf="@+id/btn_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/img_calday_result2"
-        android:layout_width="111dp"
-        android:layout_height="107dp"
+        android:layout_width="109dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="212dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/img_calday_result3"
@@ -414,8 +414,8 @@
 
     <ImageView
         android:id="@+id/img_calday_result1"
-        android:layout_width="113dp"
-        android:layout_height="107dp"
+        android:layout_width="111dp"
+        android:layout_height="82dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="212dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -424,13 +424,13 @@
 
     <ImageView
         android:id="@+id/img_calday_result3"
-        android:layout_width="111dp"
-        android:layout_height="105dp"
+        android:layout_width="113dp"
+        android:layout_height="76dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_calday_result2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.658"
+        app:layout_constraintVertical_bias="0.67"
         app:srcCompat="@drawable/walk" />
 
     <Button
@@ -452,5 +452,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/logo2" />
+
+    <TextView
+        android:id="@+id/txt_calday_result_totkcal_tot"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/fontstylekor"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_calday_result_dkcal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

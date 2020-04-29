@@ -6,6 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity_cal_searchplusl">
 
+    <Button
+        android:id="@+id/btn_calsearchplus_save5"
+        android:layout_width="119dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="260dp"
+        android:text="save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.419" />
+
+    <EditText
+        android:id="@+id/txt_calsearchplus4"
+        android:layout_width="214dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="496dp"
+        android:ems="10"
+        android:hint="입력하세요"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_calsearchplus_fooname" />
+
+    <Spinner
+        android:id="@+id/spinner_calsearchplus4"
+        android:layout_width="131dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/kcal"
+        app:layout_constraintBottom_toTopOf="@+id/txt_calsearchplus_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_calsearchplus1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501" />
+
     <TextView
         android:id="@+id/txt_calsearchplus_foonamel"
         android:layout_width="146dp"
@@ -25,29 +64,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_calsearchplusl_"
-        android:layout_width="84dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="296dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="116dp"
-        android:layout_marginBottom="101dp"
-        android:fontFamily="@font/fontstylekor"
-        android:text="인분"
-        android:textColor="@android:color/black"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_main_calorie"
-        app:layout_constraintEnd_toStartOf="@+id/btn_edit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/txt_calsearchplusl_2"
         android:layout_width="84dp"
         android:layout_height="55dp"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="404dp"
         android:layout_marginEnd="116dp"
         android:layout_marginBottom="101dp"
         android:fontFamily="@font/fontstylekor"
@@ -64,8 +85,8 @@
         android:id="@+id/txt_calsearchplusl_kcal"
         android:layout_width="84dp"
         android:layout_height="55dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="404dp"
         android:layout_marginEnd="116dp"
         android:layout_marginBottom="101dp"
         android:fontFamily="@font/fontstylekor"
@@ -78,26 +99,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_calsearchplusl_"
-        android:layout_width="236dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_calsearchplus_2"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.248" />
-
-    <Button
-        android:id="@+id/btn_calsearchplusl_save"
-        android:layout_width="119dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="264dp"
-        android:text="save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.caloriesnculture;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -39,6 +41,9 @@ public class MainActivity_cal_day_morning extends AppCompatActivity {
     ArrayAdapter<String> adapter_calday_listView_morning;
     String morning_item = "";
     SharedPreferences.Editor editor;
+    public static Context mContext;
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +59,6 @@ public class MainActivity_cal_day_morning extends AppCompatActivity {
         pref = getSharedPreferences("staticFILE", MODE_PRIVATE);
         nickdata = pref.getString("nickname", "error");
         nickname.setText(nickdata);
-
         Button btn_caldaym_search = findViewById(R.id.btn_caldaym_search);
         btn_caldaym_search.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -73,6 +77,7 @@ public class MainActivity_cal_day_morning extends AppCompatActivity {
             }
         });
 
+        mContext = this;
 
         calday_listView_morning = (ListView) findViewById(R.id.calday_listView_morning);
         list_calday_listView_morning = new ArrayList<String>();
@@ -80,6 +85,7 @@ public class MainActivity_cal_day_morning extends AppCompatActivity {
         calday_listView_morning.setAdapter(adapter_calday_listView_morning);
 
         calday_listView_morning.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
 
             @Override
             public void onItemClick(AdapterView<?> adapterView,
@@ -106,14 +112,42 @@ public class MainActivity_cal_day_morning extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 // 'No'
-                                Toast.makeText(MainActivity_cal_day_morning.this, "삭제", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(MainActivity_cal_day_morning.this, "삭제", Toast.LENGTH_SHORT).show();
 
                                 try {
                                     String result = new CustomTask().execute("morning_del", nickdata, day,morning_item).get();
 
                                     if (result.equals("ok")) {
                                         Toast.makeText(MainActivity_cal_day_morning.this, "삭제완료", Toast.LENGTH_SHORT).show();
+                                        //((MainActivity_cal_day_morning)(MainActivity_cal_day_morning.mContext)).onResume();
+                                        try {
+                                            String result2 = new CustomTask().execute("morning", nickdata, day,"0").get();
+                                            list_calday_listView_morning.clear();
+                                            if (result.equals("ok")) {
+                                                Toast.makeText(MainActivity_cal_day_morning.this, result2 + "연결ok", Toast.LENGTH_SHORT).show();
+                                                list_calday_listView_morning.add(0, "데이터가 없습니다");
+                                                adapter_calday_listView_morning.notifyDataSetChanged();
+                                            } else {
+                                                Toast.makeText(MainActivity_cal_day_morning.this, result2 + "연결ok", Toast.LENGTH_SHORT).show();
+                                                StringTokenizer st = new StringTokenizer(result, "&");
+                                                int n = st.countTokens();
+                                                String[] array = new String[st.countTokens()];
+                                                int j = 0;
+                                                while (st.hasMoreElements()) {
+                                                    array[j++] = st.nextToken();
+                                                }
+                                                String a = "";
+                                                String b = "";
+                                                String stst = Integer.toString(n);
+                                                for (int i = 0; i < n; i++) {
+                                                    list_calday_listView_morning.add(i, array[i]);
+                                                }
 
+                                                adapter_calday_listView_morning.notifyDataSetChanged();
+
+                                            }
+                                        } catch (Exception e) {
+                                        }
                                     } else {
                                         Toast.makeText(MainActivity_cal_day_morning.this, "error", Toast.LENGTH_SHORT).show();
 
@@ -124,6 +158,7 @@ public class MainActivity_cal_day_morning extends AppCompatActivity {
                                 return;
                             }
                         });
+
                 AlertDialog alert = alert_confirm.create();
                 alert.show();
                 //Intent intent_selected_item = new Intent(MainActivity_cal_day_morning.this, MainActivity_cal_searchplusm.class);
@@ -132,6 +167,9 @@ public class MainActivity_cal_day_morning extends AppCompatActivity {
 
 
             }
+
+
+
         });
 
 
@@ -192,7 +230,7 @@ public class MainActivity_cal_day_morning extends AppCompatActivity {
                 String str;
                 URL url = new URL("http://106.241.33.158:1080/SelectMorning.jsp");//바꿔주세요//"http://192.168.56.1:8080/Cap_Connection_2/join_pra.jsp"
                 // "http://106.241.33.158:1080/join.jsp"
-                //
+                //http://106.241.33.158:1080/SelectMorning.jsp
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
                 conn.setRequestMethod("POST");

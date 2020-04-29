@@ -70,7 +70,7 @@ public class MainAcivity_cal_aditm extends AppCompatActivity {
                 String a = "";
                 String b = "";
                 String stst = Integer.toString(n);
-                txt_calsearchplus_fooname2.setText(array[1]);
+                txt_calsearchplus_fooname2.setText(foodname_m_edit);
                 txt_calsearchplus_kcal2.setText(array[0]);
 
             }

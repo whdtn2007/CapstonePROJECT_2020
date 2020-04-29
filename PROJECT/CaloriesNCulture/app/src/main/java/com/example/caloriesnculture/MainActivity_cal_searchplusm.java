@@ -46,6 +46,7 @@ public class MainActivity_cal_searchplusm extends AppCompatActivity {
         pref=getSharedPreferences("staticFILE",MODE_PRIVATE);
         foodname_m=pref.getString("foodname_m","error");
         txt_foodnamem.setText(foodname_m);
+
         pref=getSharedPreferences("staticFILE",MODE_PRIVATE);
         day=pref.getString("inputdate_cal","error");
         pref=getSharedPreferences("staticFILE",MODE_PRIVATE);

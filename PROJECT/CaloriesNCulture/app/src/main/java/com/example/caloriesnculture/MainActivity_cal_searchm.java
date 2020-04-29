@@ -44,6 +44,7 @@ public class MainActivity_cal_searchm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cal_searchm);
+
         txt_calsearch_search=(EditText)findViewById(R.id.txt_calsearch_search);
         btnsearch=(Button)findViewById(R.id.btn_calsearch_search);
         btnsearch.setOnClickListener(btnListener1);
